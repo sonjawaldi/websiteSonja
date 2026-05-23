@@ -1,0 +1,7 @@
+{
+  "name": "website-sonja-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm start --prefix website-sonja"
+  }
+}
