@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.css'
+  styleUrl: './imprint.component.css',
 })
 export class ImprintComponent {}
