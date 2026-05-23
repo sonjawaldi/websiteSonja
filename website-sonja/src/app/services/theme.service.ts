@@ -5,7 +5,12 @@ import { Injectable, signal, effect } from '@angular/core';
 })
 export class ThemeService {
   darkMode = signal<boolean>(
-    typeof window !== 'undefined' ? localStorage.getItem('theme') === 'dark' : false,
+    typeof window !== 'undefined'
+      ? localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+        !localStorage.getItem('theme')
+      : true,
   );
 
   constructor() {
