@@ -32,7 +32,7 @@
             "scripts": [],
             "server": "src/main.server.ts",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": ["ng-localhost", "localhost"]
             },
             "prerender": true,
             "ssr": {
@@ -41,6 +41,9 @@
           },
           "configurations": {
             "production": {
+              "security": {
+                "allowedHosts": ["ng-localhost", "localhost"]
+              },
               "budgets": [
                 {
                   "type": "initial",
