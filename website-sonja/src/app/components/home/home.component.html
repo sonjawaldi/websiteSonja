@@ -32,13 +32,15 @@
         </div> -->
         <div class="flex justify-center gap-4">
           <a
-            href="#about"
+            [routerLink]="['/']"
+            fragment="about"
             class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-blue-500/25"
           >
             Über mich
           </a>
           <a
-            href="#contact"
+            [routerLink]="['/']"
+            fragment="contact"
             class="px-8 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-semibold rounded-full transition-all"
           >
             Kontakt
