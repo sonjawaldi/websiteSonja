@@ -1,57 +1,149 @@
-<section id="about" class="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Über mich</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          Hallo, ich bin
-          <span class="text-blue-600 dark:text-blue-400 font-semibold">Sonja Waldenspuhl</span>. Ich
-          bin {{ age }} Jahre alt und studiere aktuell Informatik.
-        </p>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          Ich mag klare, nutzerfreundliche Lösungen – ob im Studium oder im Job. Technik soll Menschen helfen und Spaß machen. In meiner Freizeit singe ich gern und tanke dabei neue Energie und Inspiration.
-        </p>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          Außerdem lebe ich mit der Stoffwechselerkrankung Phenylketonurie (PKU) und engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik an der CAU Kiel.
-        </p>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          Als Softwareentwicklerin im Bereich IT-Consulting unterstütze ich Unternehmen dabei, ihre
-          Visionen durch moderne Technologie in die Realität umzusetzen. Mein Fokus liegt auf der
-          Entwicklung effizienter Softwarelösungen und der Optimierung technischer Prozesse.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <span
-            class="px-4 py-2 bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-medium"
-            >Softwareentwicklung</span
-          >
-          <span
-            class="px-4 py-2 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-medium"
-            >IT Consulting</span
-          >
-          <span
-            class="px-4 py-2 bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-sm font-medium"
-            >Informatik Studium</span
-          >
-          <span
-            class="px-4 py-2 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium"
-            >Angular Schulung</span
-          >
+<section id="about" class="py-12 bg-white dark:bg-black transition-colors duration-300 overflow-hidden">
+  <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative">
+    <!-- Dekorative Hintergrund-Elemente -->
+    <div class="absolute -top-12 -left-24 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="absolute -bottom-12 -right-24 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Bild-Spalte -->
+      <div class="lg:col-span-5 order-2 lg:order-1 relative">
+        <div class="relative group">
+          <!-- Haupt-Bild-Container -->
+          <div class="relative z-10 aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-gray-900">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 mix-blend-overlay"></div>
+            <!-- Profilbild -->
+            <img src="sonja.jpeg" alt="Sonja Waldenspuhl" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Dekorative Rahmen -->
+          <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-blue-600/20 rounded-3xl -z-0 group-hover:border-blue-600/40 transition-colors duration-500"></div>
+          <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full -z-0"></div>
+        </div>
+
+        <!-- Stat-Badge oder Kurz-Info -->
+        <div class="absolute -bottom-2 -left-2 md:-left-8 z-20 bg-blue-50/80 dark:bg-blue-950/80 backdrop-blur-xl border border-blue-200 dark:border-white/10 p-6 rounded-2xl shadow-xl hidden md:block">
+          <div class="text-blue-400 font-bold text-2xl">IT</div>
+          <div class="text-gray-500 dark:text-gray-400 text-sm">Consulting</div>
         </div>
       </div>
-      <div class="relative">
-        <div
-          class="aspect-square rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-600 overflow-hidden shadow-2xl"
-        >
-          <!-- Placeholder für ein Profilbild -->
-          <div
-            class="w-full h-full flex items-center justify-center text-white text-6xl font-bold opacity-20"
-          >
-            SW
+
+      <!-- Text-Spalte -->
+      <div class="lg:col-span-7 order-1 lg:order-2">
+        <div class="relative mb-10">
+          <!-- Glassmorphism Card für den Text -->
+          <div class="relative z-10 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 p-8 rounded-3xl backdrop-blur-sm">
+            <div class="mb-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-bold tracking-[0.2em] text-blue-500/60 uppercase">
+                  Über mich
+                </span>
+                <div class="h-px flex-grow bg-gray-200 dark:bg-white/5"></div>
+              </div>
+              <h3 class="text-2xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight">
+                Informatik-Studentin & Softwareentwicklerin
+              </h3>
+            </div>
+            <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+              <p>
+                Hallo, ich bin <span class="text-gray-900 dark:text-white font-semibold">Sonja Waldenspuhl</span>.
+                Ich bin {{ age }} Jahre alt und studiere aktuell Informatik an der CAU Kiel.
+              </p>
+              <p>
+                Ich mag klare, nutzerfreundliche Lösungen – ob im Studium oder im Job. Technik soll Menschen helfen und Spaß machen. In meiner Freizeit singe ich gern und tanke dabei neue Energie und Inspiration.
+              </p>
+              <p>
+                Außerdem lebe ich mit der Stoffwechselerkrankung <span class="text-blue-400">Phenylketonurie (PKU)</span> und engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
+              </p>
+              <p>
+                Als Softwareentwicklerin im Bereich IT-Consulting unterstütze ich Unternehmen dabei, ihre
+                Visionen durch moderne Technologie in die Realität umzusetzen. Mein Fokus liegt auf der
+                Entwicklung effizienter Softwarelösungen und der Optimierung technischer Prozesse.
+              </p>
+            </div>
+          </div>
+          <!-- Akzent-Glow hinter der Card -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-600/5 blur-[80px] -z-0"></div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="group p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:bg-blue-600/10 hover:border-blue-600/30 transition-all duration-300">
+            <div class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Entwicklung</div>
+            <div class="text-gray-900 dark:text-white text-sm font-medium">Software</div>
+          </div>
+          <div class="group p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:bg-purple-600/10 hover:border-purple-600/30 transition-all duration-300">
+            <div class="text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">Beratung</div>
+            <div class="text-gray-900 dark:text-white text-sm font-medium">IT Consulting</div>
+          </div>
+          <div class="group p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:bg-green-600/10 hover:border-green-600/30 transition-all duration-300">
+            <div class="text-green-400 text-xs font-bold uppercase tracking-wider mb-1">Akademisch</div>
+            <div class="text-gray-900 dark:text-white text-sm font-medium">Informatik</div>
+          </div>
+          <div class="group p-4 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:bg-yellow-600/10 hover:border-yellow-600/30 transition-all duration-300">
+            <div class="text-yellow-400 text-xs font-bold uppercase tracking-wider mb-1">Frameworks</div>
+            <div class="text-gray-900 dark:text-white text-sm font-medium">Angular</div>
           </div>
         </div>
-        <div
-          class="absolute -bottom-6 -right-6 w-48 h-48 bg-gray-100 dark:bg-gray-800 -z-10 rounded-2xl transition-colors"
-        ></div>
+      </div>
+    </div>
+
+    <!-- Team Sektion -->
+    <div class="mt-24">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="text-xs font-bold tracking-[0.2em] text-blue-500/60 uppercase">
+          Mein Team
+        </span>
+        <div class="h-px flex-grow bg-gray-200 dark:bg-white/5"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Mia -->
+        <div class="group relative bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/5 blur-3xl rounded-full group-hover:bg-blue-600/10 transition-colors duration-500"></div>
+
+          <div class="relative z-10">
+            <div class="aspect-square rounded-2xl bg-gray-100 dark:bg-gray-900 mb-6 overflow-hidden shadow-inner border border-gray-200 dark:border-white/5">
+              <img src="mia.jpeg" alt="Mia" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">🐱 Mia</h4>
+            <div class="text-blue-500/80 text-xs font-bold uppercase tracking-wider mb-4">Senior Developer</div>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed italic">
+              „Spezialisiert auf Tastaturtests und spontane Code-Reviews.“
+            </p>
+          </div>
+        </div>
+
+        <!-- Mia & Sam -->
+        <div class="group relative bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300 overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-purple-600/5 blur-3xl rounded-full group-hover:bg-purple-600/10 transition-colors duration-500"></div>
+
+          <div class="relative z-10">
+            <div class="aspect-square rounded-2xl bg-gray-100 dark:bg-gray-900 mb-6 overflow-hidden shadow-inner border border-gray-200 dark:border-white/5">
+              <img src="mia_sam.jpeg" alt="Mia & Sam" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">🐱 Mia & Sam</h4>
+            <div class="text-purple-500/80 text-xs font-bold uppercase tracking-wider mb-4">UI/UX-Beratung</div>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed italic">
+              „Feedback basiert überwiegend auf Blicken. Positive Bewertung wird durch Schnurren signalisiert.“
+            </p>
+          </div>
+        </div>
+
+        <!-- Lio -->
+        <div class="group relative bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-green-600/5 blur-3xl rounded-full group-hover:bg-green-600/10 transition-colors duration-500"></div>
+
+          <div class="relative z-10">
+            <div class="aspect-square rounded-2xl bg-gray-100 dark:bg-gray-900 mb-6 overflow-hidden shadow-inner border border-gray-200 dark:border-white/5">
+              <img src="lio.jpeg" alt="Lio" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">🐶 Lio</h4>
+            <div class="text-green-500/80 text-xs font-bold uppercase tracking-wider mb-4">Chief Motivation Officer</div>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed italic">
+              „Verantwortlich für Pausen, Motivation und regelmäßige Spaziergang-Erinnerungen.“
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

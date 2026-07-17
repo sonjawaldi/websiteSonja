@@ -22,8 +22,8 @@ FROM nginx:stable-alpine
 # Hinweis: Angular 19 application builder legt Dateien oft in dist/website-sonja/browser ab
 COPY --from=build /app/dist/website-sonja/browser /usr/share/nginx/html
 
-# Kopiere eine optionale Nginx Konfiguration, falls vorhanden
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Kopiere eine optionale Nginx Konfiguration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
