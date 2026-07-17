@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -12,4 +13,30 @@ import { ProjectsComponent } from '../projects/projects.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Sonja Waldenspuhl | Softwareentwicklung & IT-Consulting Kiel');
+    this.metaService.updateTag({
+      name: 'description',
+      content:
+        'Informatik-Studentin & Softwareentwicklerin aus Kiel. Strategische IT-Beratung, effiziente Softwarelösungen und Prozessoptimierung für Ihr Unternehmen.',
+    });
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Softwareentwicklung, IT Consulting, Sonja Waldenspuhl, Kiel, Informatik, Prozessoptimierung, Beratung',
+    });
+    this.metaService.updateTag({ property: 'og:title', content: 'Sonja Waldenspuhl | Softwareentwicklung & IT-Consulting Kiel' });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content:
+        'Informatik-Studentin & Softwareentwicklerin aus Kiel. Strategische IT-Beratung, effiziente Softwarelösungen und Prozessoptimierung für Ihr Unternehmen.',
+    });
+    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://sonjawaldenspuhl.de/' });
+  }
+}
