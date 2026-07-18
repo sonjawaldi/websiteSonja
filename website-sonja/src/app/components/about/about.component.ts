@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AboutSkillsTableComponent } from './about-skills-table.component';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [CommonModule, AboutSkillsTableComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
+  standalone: true
 })
 export class AboutComponent implements OnInit {
   age: number = 0;
+  showMoreSkills: boolean = false;
 
   ngOnInit() {
     this.age = this.calculateAge(new Date(2002, 10, 16)); // 16.11.2002 (Monat ist 0-basiert)
