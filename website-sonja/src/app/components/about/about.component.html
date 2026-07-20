@@ -52,7 +52,14 @@
                 Ich mag klare, nutzerfreundliche Lösungen – ob im Studium oder im Job. Technik soll Menschen helfen und Spaß machen. In meiner Freizeit singe ich gern und tanke dabei neue Energie und Inspiration.
               </p>
               <p>
-                Außerdem lebe ich mit der Stoffwechselerkrankung <span class="text-blue-400">Phenylketonurie (PKU)</span> und engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
+                Außerdem lebe ich mit der Stoffwechselerkrankung <span class="text-blue-400">Phenylketonurie (PKU)</span> und engagiere mich ehrenamtlich – unter anderem habe ich an einer
+                <button
+                  type="button"
+                  class="text-blue-500 underline decoration-blue-500/40 underline-offset-4 transition-colors hover:text-blue-600 dark:hover:text-blue-300"
+                  aria-haspopup="dialog"
+                  (click)="showPodiumsdiskussion = true"
+                >Podiumsdiskussion der ESPKU</button>
+                teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
               </p>
               <p>
                 Als Softwareentwicklerin im Bereich IT-Consulting unterstütze ich Unternehmen dabei, ihre
@@ -136,26 +143,43 @@
           <div class="text-gray-900 dark:text-white text-sm font-bold tracking-tight">Cypress</div>
         </div>
 
-        <div (click)="showMoreSkills = !showMoreSkills" class="cursor-pointer group p-3 bg-white dark:bg-white/[0.02] border border-gray-50 dark:border-white/[0.03] rounded-2xl hover:bg-blue-600/[0.02] dark:hover:bg-blue-600/[0.05] hover:border-blue-600/30 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
+        <button
+          type="button"
+          (click)="toggleSkills()"
+          class="group p-3 bg-white dark:bg-white/[0.02] border border-gray-50 dark:border-white/[0.03] rounded-2xl hover:bg-blue-600/[0.02] dark:hover:bg-blue-600/[0.05] hover:border-blue-600/30 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black"
+          [class.border-blue-500]="showMoreSkills"
+          [class.bg-blue-50]="showMoreSkills"
+          [attr.aria-expanded]="showMoreSkills"
+          aria-controls="skills-details"
+        >
           <div class="w-8 h-8 mb-3 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500" [class.bg-blue-500]="showMoreSkills" [class.text-white]="showMoreSkills">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300" [class.rotate-180]="showMoreSkills" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </div>
-          <div class="text-blue-500/80 text-[10px] font-black uppercase tracking-[0.2em] mb-1">Mehr</div>
+          <div class="text-blue-500/80 text-[10px] font-black uppercase tracking-[0.2em] mb-1">{{ showMoreSkills ? 'Weniger' : 'Mehr' }}</div>
           <div class="text-gray-900 dark:text-white text-sm font-bold tracking-tight">Fähigkeiten</div>
-        </div>
+        </button>
       </div>
     </div>
 
-    <div *ngIf="showMoreSkills" class="mt-8 transition-all duration-500 ease-in-out">
-      <div class="flex items-center gap-3 mb-8">
-        <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
-          Fähigkeiten tabellarisch
-        </span>
-        <div class="h-px flex-grow bg-gray-100 dark:bg-white/5"></div>
+    <div
+      id="skills-details"
+      class="skills-details"
+      [class.skills-details--open]="showMoreSkills"
+      [attr.aria-hidden]="!showMoreSkills"
+    >
+      <div class="skills-details__inner">
+        <div class="pt-8">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
+              Fähigkeiten im Überblick
+            </span>
+            <div class="h-px flex-grow bg-gray-100 dark:bg-white/5"></div>
+          </div>
+          <app-about-skills-table></app-about-skills-table>
+        </div>
       </div>
-      <app-about-skills-table></app-about-skills-table>
     </div>
 
     <!-- Team Sektion -->
@@ -219,3 +243,32 @@
     </div>
   </div>
 </section>
+
+<div
+  *ngIf="showPodiumsdiskussion"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="podiumsdiskussion-title"
+  (click)="closePodiumsdiskussion()"
+>
+  <div class="relative max-h-[92vh] max-w-5xl" (click)="$event.stopPropagation()">
+    <h2 id="podiumsdiskussion-title" class="sr-only">Podiumsdiskussion der ESPKU</h2>
+    <button
+      type="button"
+      class="absolute -right-2 -top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl text-gray-900 shadow-lg transition-transform hover:scale-105"
+      aria-label="Ansicht schließen"
+      (click)="closePodiumsdiskussion()"
+    >&times;</button>
+    <div class="relative overflow-hidden rounded-2xl bg-gray-950 shadow-2xl select-none">
+      <img
+        src="es_pku_podiumsdiskussion_dig_pku.jpg"
+        alt="Podiumsdiskussion der ESPKU"
+        class="max-h-[92vh] max-w-full object-contain pointer-events-none"
+        draggable="false"
+        (contextmenu)="$event.preventDefault()"
+      >
+      <div class="absolute inset-0" aria-hidden="true" (contextmenu)="$event.preventDefault()"></div>
+    </div>
+  </div>
+</div>
