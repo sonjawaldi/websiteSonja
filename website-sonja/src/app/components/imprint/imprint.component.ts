@@ -21,7 +21,7 @@ export class ImprintComponent implements OnInit {
     this.titleService.setTitle('Impressum - Sonja Waldenspuhl');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Impressum von Sonja Waldenspuhl - Softwareentwicklung & IT-Consulting Kiel.',
+      content: 'Impressum von Sonja Waldenspuhl – digitale Lösungen speziell für Vereine.',
     });
     this.metaService.updateTag({ name: 'robots', content: 'noindex, follow' });
   }

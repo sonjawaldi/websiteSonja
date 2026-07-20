@@ -5,11 +5,12 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../about/about.component';
 import { ProjectsComponent } from '../projects/projects.component';
+import { ServicesComponent } from '../services/services.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, AboutComponent, ProjectsComponent, RouterLink],
+  imports: [HeaderComponent, FooterComponent, AboutComponent, ProjectsComponent, ServicesComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -20,21 +21,21 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Sonja Waldenspuhl | Softwareentwicklung & IT-Consulting Kiel');
+    this.titleService.setTitle('Sonja Waldenspuhl | Digitale Lösungen für Vereine');
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Informatik-Studentin & Softwareentwicklerin aus Kiel. Strategische IT-Beratung, effiziente Softwarelösungen und Prozessoptimierung für Ihr Unternehmen.',
+        'Websites, Mitgliederportale und digitale Prozesse speziell für Vereine – barrierearm, datenschutzbewusst und einfach zu pflegen.',
     });
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'Softwareentwicklung, IT Consulting, Sonja Waldenspuhl, Kiel, Informatik, Prozessoptimierung, Beratung',
+      content: 'Vereinswebsite, Mitgliederportal, Vereinssoftware, Softwareentwicklung, Barrierefreiheit, Kiel',
     });
-    this.metaService.updateTag({ property: 'og:title', content: 'Sonja Waldenspuhl | Softwareentwicklung & IT-Consulting Kiel' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Sonja Waldenspuhl | Digitale Lösungen für Vereine' });
     this.metaService.updateTag({
       property: 'og:description',
       content:
-        'Informatik-Studentin & Softwareentwicklerin aus Kiel. Strategische IT-Beratung, effiziente Softwarelösungen und Prozessoptimierung für Ihr Unternehmen.',
+        'Barrierearme, datenschutzbewusste digitale Lösungen speziell für Vereine.',
     });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://sonjawaldenspuhl.de/' });

@@ -1,10 +1,11 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutSkillsTableComponent } from './about-skills-table.component';
+import { CredentialsComponent } from '../credentials/credentials.component';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, AboutSkillsTableComponent],
+  imports: [CommonModule, AboutSkillsTableComponent, CredentialsComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   standalone: true

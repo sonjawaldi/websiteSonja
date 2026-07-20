@@ -1,10 +1,10 @@
 <section id="about" class="py-8 bg-white dark:bg-black transition-colors duration-300 overflow-hidden">
-  <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative">
+  <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative flex flex-col">
     <!-- Dekorative Hintergrund-Elemente -->
     <div class="absolute -top-12 -left-24 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
     <div class="absolute -bottom-12 -right-24 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+    <div class="order-2 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
       <!-- Bild-Spalte -->
       <div class="lg:col-span-5 order-2 lg:order-1 relative">
         <div class="relative group">
@@ -23,7 +23,7 @@
         <!-- Stat-Badge oder Kurz-Info -->
         <div class="absolute -bottom-2 -left-2 md:-left-8 z-20 bg-blue-50/80 dark:bg-blue-950/80 backdrop-blur-xl border border-blue-200 dark:border-white/10 p-6 rounded-2xl shadow-xl hidden md:block">
           <div class="text-blue-400 font-bold text-2xl">IT</div>
-          <div class="text-gray-500 dark:text-gray-400 text-sm">Consulting</div>
+          <div class="text-gray-500 dark:text-gray-400 text-sm">für Vereine</div>
         </div>
       </div>
 
@@ -62,9 +62,9 @@
                 teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
               </p>
               <p>
-                Als Softwareentwicklerin im Bereich IT-Consulting unterstütze ich Unternehmen dabei, ihre
-                Visionen durch moderne Technologie in die Realität umzusetzen. Mein Fokus liegt auf der
-                Entwicklung effizienter Softwarelösungen und der Optimierung technischer Prozesse.
+                Als Softwareentwicklerin unterstütze ich Vereine dabei, ihre
+                wichtige Arbeit digital sichtbar und leichter zugänglich zu machen. Mein Fokus liegt auf
+                verständlichen, zuverlässigen Lösungen, die auch im ehrenamtlichen Alltag gut funktionieren.
               </p>
             </div>
           </div>
@@ -74,7 +74,13 @@
       </div>
     </div>
 
-    <div class="mt-12">
+    <div class="order-1">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
+          Fähigkeiten
+        </span>
+        <div class="h-px flex-grow bg-gray-100 dark:bg-white/5"></div>
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3">
         <div class="group p-3 bg-white dark:bg-white/[0.02] border border-gray-50 dark:border-white/[0.03] rounded-2xl hover:bg-blue-600/[0.02] dark:hover:bg-blue-600/[0.05] hover:border-blue-600/30 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
           <div class="w-8 h-8 mb-3 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
@@ -93,7 +99,7 @@
             </svg>
           </div>
           <div class="text-purple-500/80 text-[10px] font-black uppercase tracking-[0.2em] mb-1">Beratung</div>
-          <div class="text-gray-900 dark:text-white text-sm font-bold tracking-tight">IT Consulting</div>
+          <div class="text-gray-900 dark:text-white text-sm font-bold tracking-tight">Vereins-IT</div>
         </div>
 
         <div class="group p-3 bg-white dark:bg-white/[0.02] border border-gray-50 dark:border-white/[0.03] rounded-2xl hover:bg-green-600/[0.02] dark:hover:bg-green-600/[0.05] hover:border-green-600/30 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
@@ -116,11 +122,6 @@
           </div>
           <div class="text-yellow-500/80 text-[10px] font-black uppercase tracking-[0.2em] mb-1">Frontend</div>
           <div class="text-gray-900 dark:text-white text-sm font-bold tracking-tight">Angular</div>
-          <a href="zertifikat-sonjawaldenspuhl.pdf" target="_blank" class="absolute -top-1 -right-1 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform opacity-0 group-hover:opacity-100" title="Zertifikat ansehen">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </a>
         </div>
 
         <div class="group p-3 bg-white dark:bg-white/[0.02] border border-gray-50 dark:border-white/[0.03] rounded-2xl hover:bg-orange-600/[0.02] dark:hover:bg-orange-600/[0.05] hover:border-orange-600/30 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center">
@@ -165,7 +166,7 @@
 
     <div
       id="skills-details"
-      class="skills-details"
+      class="skills-details order-1"
       [class.skills-details--open]="showMoreSkills"
       [attr.aria-hidden]="!showMoreSkills"
     >
@@ -182,8 +183,12 @@
       </div>
     </div>
 
+    <div class="order-1">
+      <app-credentials></app-credentials>
+    </div>
+
     <!-- Team Sektion -->
-    <div class="mt-12">
+    <div class="order-3 mt-12">
       <div class="flex items-center gap-3 mb-8">
         <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
           Mein Team

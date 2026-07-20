@@ -3,40 +3,24 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="relative py-8 overflow-hidden">
+    <section class="relative py-14 md:py-20 overflow-hidden">
       <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative z-10 text-center">
-        <h1
-          class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight"
-        >Sonja Waldenspuhl -
-          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            >Softwareentwicklung & IT-Consulting</span
-          >
+        <div class="inline-flex mb-5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-[10px] font-black uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-900">Digitale Lösungen für Vereine</div>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
+          Digitale Lösungen für
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Vereine</span>
         </h1>
-        <p class="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
-          Ich helfe Unternehmen dabei, komplexe Herausforderungen zu meistern und nachhaltige
-          Ergebnisse zu erzielen.
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
+          Websites, Portale und digitale Prozesse – mit persönlicher Erfahrung im Bereich seltene Erkrankungen und Verständnis für ehrenamtliche Strukturen.
         </p>
-        <!-- <div class="flex justify-center gap-4">
-          <a
-            href="#projects"
-            class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-blue-500/25"
-          >
-            Projekte ansehen
-          </a>
-          <a
-            href="#about"
-            class="px-8 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-semibold rounded-full transition-all"
-          >
-            Über mich
-          </a>
-        </div> -->
+        <p class="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-9">Barrierearm, datenschutzbewusst und einfach nutzbar – für Mitglieder jeden Alters.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a
             [routerLink]="['/']"
-            fragment="about"
+            fragment="services"
             class="group px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 flex items-center justify-center gap-2"
           >
-            Über mich
+            Leistungen ansehen
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 transition-transform group-hover:translate-x-1"
@@ -52,7 +36,7 @@
             fragment="contact"
             class="px-6 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-blue-500/50 text-gray-900 dark:text-white font-bold rounded-2xl transition-all shadow-sm hover:shadow-xl flex items-center justify-center"
           >
-            Kontakt aufnehmen
+            Projekt besprechen
           </a>
         </div>
       </div>
@@ -68,46 +52,71 @@
       </div>
     </section>
 
-    <app-about></app-about>
+    <app-services></app-services>
     <app-projects></app-projects>
+    <app-about></app-about>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-10 bg-white dark:bg-black transition-colors duration-300">
+    <section id="contact" class="py-16 md:py-20 bg-white dark:bg-black transition-colors duration-300">
       <div class="container mx-auto px-6 sm:px-12 lg:px-20">
         <div
-          class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-indigo-800 dark:from-blue-900 dark:to-indigo-950 rounded-[2rem] p-6 md:p-10 text-center text-white shadow-[0_20px_50px_rgba(37,99,235,0.2)] relative overflow-hidden"
+          class="relative max-w-5xl mx-auto overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950 shadow-[0_24px_70px_rgba(37,99,235,0.25)]"
         >
-          <div class="relative z-10">
-            <h2 class="text-2xl md:text-3xl font-black mb-6 tracking-tight">
-              Lust auf ein gemeinsames Projekt?
-            </h2>
-            <p class="text-blue-100 text-base mb-10 max-w-2xl mx-auto leading-relaxed">
-              Ob strategische Beratung oder individuelle Softwareentwicklung – ich freue mich darauf, Sie kennenzulernen.
-            </p>
-            <a
-              href="mailto:business@sonjawaldenspuhl.de"
-              class="group inline-flex items-center gap-3 px-6 py-3 bg-white text-blue-600 font-black rounded-xl hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
-            >
-              Jetzt Kontakt aufnehmen
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <div class="relative z-10 grid lg:grid-cols-[1.15fr_0.85fr]">
+            <div class="p-7 sm:p-10 lg:p-12 text-white">
+              <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-blue-100 backdrop-blur-sm">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-300" aria-hidden="true"></span>
+                Bereit für Ihre Idee
+              </div>
+              <h2 class="mt-5 max-w-xl text-3xl md:text-4xl font-black tracking-tight leading-tight">
+                Machen wir Ihren Verein digital stärker.
+              </h2>
+              <p class="mt-4 max-w-xl text-sm md:text-base leading-relaxed text-blue-100">
+                Sie haben eine Idee, ein konkretes Problem oder wissen noch nicht genau, wo Sie anfangen sollen? Schreiben Sie mir – wir finden gemeinsam den passenden nächsten Schritt.
+              </p>
+
+              <ul class="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3" aria-label="Vorteile der Kontaktaufnahme">
+                <li class="flex items-center gap-2 text-xs font-bold text-white/90">
+                  <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 text-emerald-300" aria-hidden="true">✓</span>
+                  Unverbindlich
+                </li>
+                <li class="flex items-center gap-2 text-xs font-bold text-white/90">
+                  <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 text-emerald-300" aria-hidden="true">✓</span>
+                  Persönlich
+                </li>
+                <li class="flex items-center gap-2 text-xs font-bold text-white/90">
+                  <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 text-emerald-300" aria-hidden="true">✓</span>
+                  Verständlich
+                </li>
+              </ul>
+            </div>
+
+            <div class="m-3 mt-0 lg:ml-0 lg:mt-3 rounded-[1.5rem] bg-white p-6 sm:p-8 text-gray-900 shadow-2xl dark:bg-gray-950 dark:text-white">
+              <span class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Direkter Kontakt</span>
+              <h3 class="mt-3 text-xl font-black tracking-tight">Erzählen Sie mir von Ihrem Verein</h3>
+              <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                Ein paar Sätze zu Ihrem Vorhaben reichen für den Anfang. Ich melde mich persönlich bei Ihnen zurück.
+              </p>
+
+              <a
+                href="mailto:business@sonjawaldenspuhl.de?subject=Anfrage%20für%20meinen%20Verein"
+                class="group mt-7 flex items-center justify-between gap-4 rounded-2xl bg-blue-600 px-5 py-4 text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-900"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </a>
+                <span>
+                  <span class="block text-xs text-blue-100">E-Mail schreiben</span>
+                  <span class="mt-0.5 block text-sm font-black">business&#64;sonjawaldenspuhl.de</span>
+                </span>
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+
+              <p class="mt-4 text-center text-[11px] text-gray-500 dark:text-gray-500">
+                Kostenloses und unverbindliches Erstgespräch
+              </p>
+            </div>
           </div>
 
-          <!-- Modern Deco Elements -->
-          <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/10 blur-3xl rounded-full"></div>
-            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-400/20 blur-3xl rounded-full"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full"></div>
-          </div>
+          <div class="absolute -left-28 -top-28 h-80 w-80 rounded-full bg-cyan-300/20 blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl pointer-events-none"></div>
         </div>
       </div>
     </section>

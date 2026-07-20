@@ -14,6 +14,14 @@
     <nav class="hidden md:flex items-center gap-8">
       <a
         [routerLink]="['/']"
+        fragment="services"
+        class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
+      >
+        Leistungen
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a
+        [routerLink]="['/']"
         fragment="about"
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
@@ -26,6 +34,14 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Projekte
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a
+        [routerLink]="['/']"
+        fragment="credentials"
+        class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
+      >
+        Nachweise
         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
       </a>
       <a
@@ -111,6 +127,13 @@
       <nav class="flex flex-col p-4 space-y-4">
         <a
           [routerLink]="['/']"
+          fragment="services"
+          (click)="isMenuOpen = false"
+          class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
+          >Leistungen</a
+        >
+        <a
+          [routerLink]="['/']"
           fragment="about"
           (click)="isMenuOpen = false"
           class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
@@ -122,6 +145,13 @@
           (click)="isMenuOpen = false"
           class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
           >Projekte</a
+        >
+        <a
+          [routerLink]="['/']"
+          fragment="credentials"
+          (click)="isMenuOpen = false"
+          class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
+          >Nachweise</a
         >
         <a
           [routerLink]="['/']"

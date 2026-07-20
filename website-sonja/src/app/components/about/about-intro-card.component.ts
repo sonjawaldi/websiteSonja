@@ -29,9 +29,9 @@ import { Component, Input } from '@angular/core';
               Außerdem lebe ich mit der Stoffwechselerkrankung <span class="text-blue-400">Phenylketonurie (PKU)</span> und engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
             </p>
             <p>
-              Als Softwareentwicklerin im Bereich IT-Consulting unterstütze ich Unternehmen dabei, ihre
-              Visionen durch moderne Technologie in die Realität umzusetzen. Mein Fokus liegt auf der
-              Entwicklung effizienter Softwarelösungen und der Optimierung technischer Prozesse.
+              Als Softwareentwicklerin unterstütze ich Vereine dabei, ihre
+              wichtige Arbeit digital sichtbar und leichter zugänglich zu machen. Mein Fokus liegt auf
+              verständlichen Lösungen, die auch im ehrenamtlichen Alltag gut funktionieren.
             </p>
           </div>
         </div>
