@@ -4,7 +4,7 @@
     method="POST"
     class="space-y-3 sm:space-y-4"
   >
-    <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website" />
+    <input type="hidden" name="_subject" [value]="subject()" />
     <input type="hidden" name="_template" value="table" />
     <input type="hidden" name="_next" value="https://sonjawaldenspuhl.de/#contact" />
     <div class="grid gap-3 sm:grid-cols-2 sm:gap-4">
@@ -69,6 +69,7 @@
         required
         minlength="10"
         rows="4"
+        [value]="message()"
         class="w-full resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
       ></textarea>
     </div>

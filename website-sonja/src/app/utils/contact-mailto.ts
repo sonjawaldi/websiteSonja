@@ -2,11 +2,16 @@ import { Language } from '../services/language.service';
 
 const EMAIL_ADDRESS = 'business@sonjawaldenspuhl.de';
 
-export function createContactMailto(language: Language): string {
+export function createContactMailto(
+  language: Language,
+  prefill?: { subject: string; message: string },
+): string {
   const subject =
-    language === 'de' ? 'Anfrage für ein persönliches Gespräch' : 'Request for a meeting';
+    prefill?.subject ??
+    (language === 'de' ? 'Anfrage für ein persönliches Gespräch' : 'Request for a meeting');
   const body =
-    language === 'de'
+    prefill?.message ??
+    (language === 'de'
       ? `Sehr geehrte Frau Waldenspuhl,
 
 ich würde mich freuen, mit Ihnen über ein mögliches Projekt zu sprechen und einen passenden Gesprächstermin zu vereinbaren.
@@ -28,7 +33,7 @@ I look forward to hearing from you.
 
 Kind regards,
 [Your name]
-`;
+`);
 
   return `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }

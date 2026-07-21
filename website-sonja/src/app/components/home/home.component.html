@@ -2,7 +2,7 @@
   <app-header />
   <main>
     <app-home-hero />
-    <app-home-challenges (contactFormRequested)="contactSection.showForm()" />
+    <app-home-challenges (contactFormRequested)="contactSection.showForm($event)" />
     <app-services />
     <app-projects />
     <section

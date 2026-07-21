@@ -4,14 +4,14 @@
 
 .nav-trigger {
   display: flex;
-  width: 8.75rem;
+  width: 11.5rem;
   height: 2.5rem;
   cursor: pointer;
   list-style: none;
   align-items: center;
   justify-content: space-between;
   border-radius: 0.75rem;
-  padding: 0 0.875rem;
+  padding: 0 1rem;
   color: rgb(51 65 85);
   font-size: 0.875rem;
   font-weight: 700;
@@ -50,7 +50,8 @@
   top: calc(100% + 0.75rem);
   right: 0;
   display: flex;
-  width: 14rem;
+  width: 100%;
+  min-width: 100%;
   flex-direction: column;
   border: 1px solid rgb(226 232 240);
   border-radius: 1rem;
@@ -65,7 +66,7 @@
   height: 2.5rem;
   align-items: center;
   border-radius: 0.5rem;
-  padding: 0 0.75rem;
+  padding: 0 1rem;
   color: rgb(71 85 105);
   font-size: 0.8125rem;
   font-weight: 600;

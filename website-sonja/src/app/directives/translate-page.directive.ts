@@ -11,12 +11,20 @@ import {
 import { LanguageService } from '../services/language.service';
 
 const EN: Record<string, string> = {
+  Start: 'Home',
+  Herausforderungen: 'Challenges',
   Leistungen: 'Services',
   Projekte: 'Projects',
   'Über mich': 'About me',
+  Übersicht: 'Overview',
+  Motivation: 'Motivation',
   Nachweise: 'Credentials',
   Kontakt: 'Contact',
   'Sprache auswählen': 'Select language',
+  Hauptnavigation: 'Main navigation',
+  'Mobile Hauptnavigation': 'Mobile main navigation',
+  'Farbschema wechseln': 'Toggle color scheme',
+  'Navigation öffnen oder schließen': 'Open or close navigation',
   'Digitale Lösungen für Vereine': 'Digital solutions for associations',
   'Digitale Lösungen für': 'Digital solutions for',
   Vereine: 'associations',
@@ -30,6 +38,8 @@ const EN: Record<string, string> = {
   'Kommt Ihnen das bekannt vor?': 'Does this sound familiar?',
   'Welche dieser Aussagen beschreibt gerade Ihren Vereinsalltag?':
     'Which of these statements best describes your organisation right now?',
+  'Wählen Sie aus, was Ihren Vereinsalltag gerade beschäftigt.':
+    'Select the topics currently affecting your organisation.',
   'Typische Herausforderungen im Vereinsalltag auswählen':
     'Select typical challenges in everyday association work',
   'Unsere Website ist seit Jahren nicht aktualisiert und funktioniert auf dem Smartphone nur eingeschränkt.':
@@ -40,6 +50,18 @@ const EN: Record<string, string> = {
     'We lack the technical expertise to make good decisions about our website and software.',
   'Bei einem Wechsel im Vorstand gehen Zugänge, Abläufe und wichtiges Wissen verloren.':
     'When board members change, access credentials, processes and important knowledge are lost.',
+  'Dann schauen wir uns gemeinsam an, was bleiben kann und wo eine Modernisierung sinnvoll ist.':
+    'Together, we will assess what can stay and where modernisation makes sense.',
+  'Ich kann Ihre Prozesse analysieren und prüfen, welche Abläufe sich sinnvoll digitalisieren lassen.':
+    'I can analyse your processes and identify which workflows can be digitised effectively.',
+  'Ich übersetze technische Möglichkeiten in verständliche Entscheidungen und begleite Sie bei der Umsetzung.':
+    'I turn technical options into clear decisions and support you through implementation.',
+  'Gemeinsam schaffen wir klare Strukturen, damit Zugänge, Abläufe und Wissen dauerhaft erhalten bleiben.':
+    'Together, we will create clear structures so access, processes and knowledge are retained.',
+  'Das klingt nach einem Projekt, bei dem ich Sie unterstützen kann.':
+    'This sounds like a project I can help you with.',
+  'Auf Basis Ihrer Auswahl können wir uns gemeinsam': 'Based on your selection, we can look at',
+  'Projekt besprechen →': 'Discuss a project →',
   'Finde jetzt deine individuelle Lösung und lasse dich beraten.':
     'Find your tailored solution and get advice.',
   Abschicken: 'Submit',

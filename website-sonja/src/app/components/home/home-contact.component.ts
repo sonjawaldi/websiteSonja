@@ -3,6 +3,7 @@ import { Component, HostListener, OnDestroy, computed, inject } from '@angular/c
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { LanguageService } from '../../services/language.service';
 import { createContactMailto } from '../../utils/contact-mailto';
+import type { ContactPrefill } from './home-challenges.component';
 
 @Component({
   selector: 'app-home-contact',
@@ -103,7 +104,7 @@ import { createContactMailto } from '../../utils/contact-mailto';
             &times;
           </button>
           <h2 id="contact-form-dialog-title" class="sr-only">Kontakt aufnehmen</h2>
-          <app-contact-form />
+          <app-contact-form [subject]="formPrefill.subject" [message]="formPrefill.message" />
         </section>
       </div>
     }
@@ -116,8 +117,13 @@ export class HomeContactComponent implements OnDestroy {
   private previouslyFocusedElement: HTMLElement | null = null;
   readonly benefits = ['Unverbindlich', 'Persönlich', 'Verständlich'];
   dialogOpen = false;
+  formPrefill: ContactPrefill = { subject: 'Neue Kontaktanfrage über die Website', message: '' };
 
-  showForm(): void {
+  showForm(prefill?: ContactPrefill): void {
+    this.formPrefill = prefill ?? {
+      subject: 'Neue Kontaktanfrage über die Website',
+      message: '',
+    };
     this.previouslyFocusedElement = this.document.activeElement as HTMLElement | null;
     this.dialogOpen = true;
     this.document.body.style.overflow = 'hidden';
