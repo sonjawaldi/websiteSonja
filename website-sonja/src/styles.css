@@ -6,7 +6,22 @@
   --primary-color: #3b82f6;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

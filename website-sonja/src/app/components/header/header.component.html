@@ -22,18 +22,18 @@
       </a>
       <a
         [routerLink]="['/']"
-        fragment="about"
-        class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
-      >
-        Über mich
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
-      </a>
-      <a
-        [routerLink]="['/']"
         fragment="projects"
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Projekte
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+      </a>
+      <a
+        [routerLink]="['/']"
+        fragment="about"
+        class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
+      >
+        Über mich
         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
       </a>
       <a
@@ -55,6 +55,10 @@
     </nav>
 
     <div class="flex items-center gap-4">
+      <div class="flex items-center rounded-lg bg-gray-100 p-1 text-[11px] font-bold dark:bg-gray-800" aria-label="Sprache auswählen">
+        <button type="button" (click)="languageService.setLanguage('de')" class="rounded-md px-2 py-1 transition-colors" [class.bg-white]="languageService.language() === 'de'" [class.text-blue-600]="languageService.language() === 'de'" [class.shadow-sm]="languageService.language() === 'de'" [class.dark:bg-gray-700]="languageService.language() === 'de'">DE</button>
+        <button type="button" (click)="languageService.setLanguage('en')" class="rounded-md px-2 py-1 transition-colors" [class.bg-white]="languageService.language() === 'en'" [class.text-blue-600]="languageService.language() === 'en'" [class.shadow-sm]="languageService.language() === 'en'" [class.dark:bg-gray-700]="languageService.language() === 'en'">EN</button>
+      </div>
       <button
         (click)="themeService.toggleDarkMode()"
         class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:ring-2 ring-gray-200 dark:ring-gray-700 transition-all"
@@ -134,17 +138,17 @@
         >
         <a
           [routerLink]="['/']"
-          fragment="about"
-          (click)="isMenuOpen = false"
-          class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
-          >Über mich</a
-        >
-        <a
-          [routerLink]="['/']"
           fragment="projects"
           (click)="isMenuOpen = false"
           class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
           >Projekte</a
+        >
+        <a
+          [routerLink]="['/']"
+          fragment="about"
+          (click)="isMenuOpen = false"
+          class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-400"
+          >Über mich</a
         >
         <a
           [routerLink]="['/']"

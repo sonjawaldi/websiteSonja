@@ -20,18 +20,19 @@ import { Component, Input } from '@angular/core';
           <div class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed space-y-5">
             <p>
               Hallo, ich bin <span class="text-gray-900 dark:text-white font-semibold">Sonja Waldenspuhl</span>.
-              Ich bin {{ age }} Jahre alt und studiere aktuell Informatik an der CAU Kiel.
+              Ich bin {{ age }} Jahre alt, studiere Informatik an der CAU Kiel und arbeite nebenbei als Entwicklerin bei der REWE Digital GmbH.
             </p>
             <p>
-              Ich mag klare, nutzerfreundliche Lösungen – ob im Studium oder im Job. Technik soll Menschen helfen und Spaß machen. In meiner Freizeit singe ich gern und tanke dabei neue Energie und Inspiration.
+              Ich mag klare, nutzerfreundliche Lösungen – ob im Studium, im Job oder in eigenen Projekten. Technik soll Menschen helfen und Spaß machen. In meiner Freizeit singe ich gern und tanke dabei neue Energie und Inspiration.
             </p>
             <p>
-              Außerdem lebe ich mit der Stoffwechselerkrankung <span class="text-blue-400">Phenylketonurie (PKU)</span> und engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen. Zusätzlich bin ich Fachschaftsmitglied der Fachschaft Informatik.
+              Ich engagiere mich ehrenamtlich – unter anderem habe ich an einer Podiumsdiskussion der ESPKU teilgenommen und bin Mitglied der Fachschaft Informatik.
             </p>
             <p>
               Als Softwareentwicklerin unterstütze ich Vereine dabei, ihre
-              wichtige Arbeit digital sichtbar und leichter zugänglich zu machen. Mein Fokus liegt auf
-              verständlichen Lösungen, die auch im ehrenamtlichen Alltag gut funktionieren.
+              wichtige Arbeit digital sichtbar und leicht zugänglich zu machen. Mein Fokus liegt auf
+              verständlichen, zuverlässigen Lösungen, die auch im ehrenamtlichen Alltag gut funktionieren –
+              bezahlbar, einfach zu pflegen und ohne unnötigen Fachjargon.
             </p>
           </div>
         </div>

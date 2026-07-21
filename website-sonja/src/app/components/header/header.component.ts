@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class HeaderComponent {
   themeService = inject(ThemeService);
+  languageService = inject(LanguageService);
   isMenuOpen = false;
 
   toggleMenu() {
