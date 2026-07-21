@@ -2,7 +2,7 @@
   id="about"
   class="py-8 bg-white dark:bg-black transition-colors duration-300 overflow-hidden"
 >
-  <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative flex flex-col">
+  <div class="container mx-auto px-6 sm:px-12 lg:px-20 relative">
     <!-- Dekorative Hintergrund-Elemente -->
     <div
       class="absolute -top-12 -left-24 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"
@@ -10,49 +10,6 @@
     <div
       class="absolute -bottom-12 -right-24 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"
     ></div>
-
-    <div class="relative mb-12">
-      <div
-        class="relative z-10 mx-auto max-w-4xl rounded-3xl border border-blue-100 bg-blue-50/50 p-6 shadow-xl shadow-blue-900/5 backdrop-blur-sm dark:border-blue-900/40 dark:bg-blue-950/20 md:p-9"
-      >
-        <div class="mb-5 flex items-center gap-3">
-          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500/70"
-            >Motivation</span
-          >
-          <div class="h-px flex-grow bg-blue-100 dark:bg-blue-900/40"></div>
-        </div>
-        <h2 class="text-xl font-black leading-tight text-gray-900 dark:text-white md:text-2xl">
-          Warum mir Vereinsarbeit am Herzen liegt
-        </h2>
-        <div
-          class="mt-5 space-y-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300 md:text-base"
-        >
-          <p>
-            Ich lebe seit meiner Geburt mit Phenylketonurie – einer seltenen Stoffwechselerkrankung,
-            die den Alltag oft kompliziert macht, auch wenn man von außen nichts sieht. Es gibt
-            Phasen, in denen man sich mit einer seltenen Erkrankung allein fühlt: wenn Ärzte die
-            Krankheit kaum kennen, wenn Standardlösungen nicht passen oder wenn niemand in der Nähe
-            genau weiß, wie es sich anfühlt.
-          </p>
-          <p>
-            Was mir in diesen Momenten am meisten geholfen hat, war die Gemeinschaft. Der Austausch
-            mit anderen Betroffenen und das Gefühl, verstanden zu werden, ohne alles erklären zu
-            müssen, haben mir gezeigt, wie wichtig Vereine und Selbsthilfegruppen für Menschen mit
-            seltenen Erkrankungen sind. Ein guter Verein ist mehr als eine Organisation. Er kann ein
-            Anker sein, wenn andere Anker fehlen.
-          </p>
-          <p class="font-medium text-gray-800 dark:text-gray-100">
-            Genau deshalb möchte ich Vereine und Organisationen in diesem Bereich mit meiner Arbeit
-            unterstützen. Damit die Energie, die sonst in umständliche Technik oder veraltete
-            Systeme fließt, wieder dort ankommt, wo sie hingehört: bei den Menschen, die diese
-            Gemeinschaft brauchen.
-          </p>
-        </div>
-      </div>
-      <div
-        class="absolute left-1/2 top-1/2 -z-0 h-full w-full -translate-x-1/2 -translate-y-1/2 bg-blue-600/5 blur-[80px]"
-      ></div>
-    </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
       <!-- Bild-Spalte -->
@@ -76,14 +33,6 @@
           <div
             class="absolute -top-6 -left-6 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full -z-0"
           ></div>
-        </div>
-
-        <!-- Stat-Badge oder Kurz-Info -->
-        <div
-          class="absolute -bottom-2 -left-2 md:-left-8 z-20 bg-blue-50/80 dark:bg-blue-950/80 backdrop-blur-xl border border-blue-200 dark:border-white/10 p-6 rounded-2xl shadow-xl hidden md:block"
-        >
-          <div class="text-blue-400 font-bold text-2xl">IT</div>
-          <div class="text-gray-500 dark:text-gray-400 text-sm">für Vereine</div>
         </div>
       </div>
 
@@ -145,7 +94,50 @@
       </div>
     </div>
 
-    <div class="mt-12">
+    <div id="motivation" class="relative mt-12 scroll-mt-24">
+      <div
+        class="relative z-10 mx-auto max-w-4xl rounded-3xl border border-blue-100 bg-blue-50/50 p-6 shadow-xl shadow-blue-900/5 backdrop-blur-sm dark:border-blue-900/40 dark:bg-blue-950/20 md:p-9"
+      >
+        <div class="mb-5 flex items-center gap-3">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500/70"
+            >Motivation</span
+          >
+          <div class="h-px flex-grow bg-blue-100 dark:bg-blue-900/40"></div>
+        </div>
+        <h2 class="text-xl font-black leading-tight text-gray-900 dark:text-white md:text-2xl">
+          Warum mir Vereinsarbeit am Herzen liegt
+        </h2>
+        <div
+          class="mt-5 space-y-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300 md:text-base"
+        >
+          <p>
+            Ich lebe seit meiner Geburt mit Phenylketonurie – einer seltenen Stoffwechselerkrankung,
+            die den Alltag oft kompliziert macht, auch wenn man von außen nichts sieht. Es gibt
+            Phasen, in denen man sich mit einer seltenen Erkrankung allein fühlt: wenn Ärzte die
+            Krankheit kaum kennen, wenn Standardlösungen nicht passen oder wenn niemand in der Nähe
+            genau weiß, wie es sich anfühlt.
+          </p>
+          <p>
+            Was mir in diesen Momenten am meisten geholfen hat, war die Gemeinschaft. Der Austausch
+            mit anderen Betroffenen und das Gefühl, verstanden zu werden, ohne alles erklären zu
+            müssen, haben mir gezeigt, wie wichtig Vereine und Selbsthilfegruppen für Menschen mit
+            seltenen Erkrankungen sind. Ein guter Verein ist mehr als eine Organisation. Er kann ein
+            Anker sein, wenn andere Anker fehlen.
+          </p>
+          <p class="font-medium text-gray-800 dark:text-gray-100">
+            Genau deshalb möchte ich Vereine und Organisationen in diesem Bereich mit meiner Arbeit
+            unterstützen. Damit die Energie, die sonst in umständliche Technik oder veraltete
+            Systeme fließt, wieder dort ankommt, wo sie hingehört: bei den Menschen, die diese
+            Gemeinschaft brauchen.
+          </p>
+        </div>
+      </div>
+      <div
+        class="absolute left-1/2 top-1/2 -z-0 h-full w-full -translate-x-1/2 -translate-y-1/2 bg-blue-600/5 blur-[80px]"
+      ></div>
+    </div>
+
+    <div id="skills" class="mt-12 scroll-mt-24">
       <div class="flex items-center gap-3 mb-6">
         <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
           Fähigkeiten
@@ -365,9 +357,10 @@
 
     <div
       id="skills-details"
-      class="skills-details order-1"
+      class="skills-details"
       [class.skills-details--open]="showMoreSkills"
       [attr.aria-hidden]="!showMoreSkills"
+      [attr.inert]="showMoreSkills ? null : ''"
     >
       <div class="skills-details__inner">
         <div class="pt-8">
@@ -382,12 +375,12 @@
       </div>
     </div>
 
-    <div class="order-1">
+    <div>
       <app-credentials></app-credentials>
     </div>
 
     <!-- Team Sektion -->
-    <div class="order-3 mt-12">
+    <div id="team" class="mt-12 scroll-mt-24">
       <div class="flex items-center gap-3 mb-8">
         <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
           Mein Team

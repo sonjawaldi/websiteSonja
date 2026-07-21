@@ -21,13 +21,6 @@ import { Component } from '@angular/core';
           class="absolute -top-6 -left-6 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full -z-0"
         ></div>
       </div>
-
-      <div
-        class="absolute -bottom-2 -left-2 md:-left-8 z-20 bg-blue-50/80 dark:bg-blue-950/80 backdrop-blur-xl border border-blue-200 dark:border-white/10 p-6 rounded-2xl shadow-xl hidden md:block"
-      >
-        <div class="text-blue-400 font-bold text-2xl">IT</div>
-        <div class="text-gray-500 dark:text-gray-400 text-sm">für Vereine</div>
-      </div>
     </div>
   `,
   standalone: true,

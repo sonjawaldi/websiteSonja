@@ -66,7 +66,7 @@ import { createContactMailto } from '../../utils/contact-mailto';
                 class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
                 (click)="showForm()"
               >
-                Kontaktformular öffnen <span aria-hidden="true">→</span>
+                Kontakt aufnehmen <span aria-hidden="true">→</span>
               </button>
               <a
                 [href]="contactMailto()"

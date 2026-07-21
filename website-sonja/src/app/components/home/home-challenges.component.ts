@@ -12,7 +12,10 @@ interface Challenge {
   selector: 'app-home-challenges',
   standalone: true,
   template: `
-    <section class="bg-white py-14 transition-colors duration-300 dark:bg-black md:py-16">
+    <section
+      id="challenges"
+      class="bg-white py-14 transition-colors duration-300 dark:bg-black md:py-16"
+    >
       <div class="container mx-auto px-6 sm:px-12 lg:px-20">
         <header class="mx-auto max-w-3xl text-center">
           <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500/70"
@@ -181,8 +184,8 @@ export class HomeChallengesComponent {
     );
     const body = encodeURIComponent(
       isGerman
-        ? `Sehr geehrte Frau Waldenspuhl,\n\nbei uns treffen folgende Punkte zu:\n\n${selection}\n\nIch würde mich freuen, mit Ihnen über ein mögliches Projekt zu sprechen und einen passenden Gesprächstermin zu vereinbaren.\n\nTelefonnummer: \n\nMit freundlichen Grüßen\n`
-        : `Dear Ms Waldenspuhl,\n\nThe following points apply to our association:\n\n${selection}\n\nI would be delighted to discuss a potential project with you and arrange a suitable time for a meeting.\n\nPhone: \n\nKind regards,\n`,
+        ? `Sehr geehrte Frau Waldenspuhl,\n\nbei uns treffen folgende Punkte zu:\n\n${selection}\n\nIch würde mich freuen, mit Ihnen über ein mögliches Projekt zu sprechen und einen passenden Gesprächstermin zu vereinbaren.\n\nTelefonnummer: [Ihre Telefonnummer]\n\nMit freundlichen Grüßen\n[Ihr Name]\n`
+        : `Dear Ms Waldenspuhl,\n\nThe following points apply to our association:\n\n${selection}\n\nI would be delighted to discuss a potential project with you and arrange a suitable time for a meeting.\n\nPhone: [Your phone number]\n\nKind regards,\n[Your name]\n`,
     );
     this.contactMailto = `mailto:business@sonjawaldenspuhl.de?subject=${subject}&body=${body}`;
     this.dialogOpen = true;

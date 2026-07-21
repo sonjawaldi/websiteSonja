@@ -5,7 +5,35 @@
     <app-home-challenges (contactFormRequested)="contactSection.showForm()" />
     <app-services />
     <app-projects />
-    <app-about />
+    <section
+      id="about"
+      class="bg-white py-14 transition-colors duration-300 dark:bg-black md:py-16"
+    >
+      <div class="container mx-auto px-6 sm:px-12 lg:px-20">
+        <div
+          class="mx-auto max-w-4xl rounded-3xl border border-blue-100 bg-blue-50/50 p-7 text-center shadow-xl shadow-blue-900/5 dark:border-blue-900/40 dark:bg-blue-950/20 md:p-10"
+        >
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500/70">
+            Motivation &amp; Persönliches
+          </span>
+          <h2 class="mt-3 text-2xl font-black text-gray-900 dark:text-white md:text-3xl">
+            Mehr über mich erfahren
+          </h2>
+          <p
+            class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 dark:text-gray-300 md:text-base"
+          >
+            Meine Motivation, mein beruflicher Hintergrund, meine Fähigkeiten und mein Team finden
+            Sie jetzt gesammelt auf einer eigenen Unterseite.
+          </p>
+          <a
+            [routerLink]="['/ueber-mich']"
+            class="mt-7 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700"
+          >
+            Zur Über-mich-Seite <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
     <app-home-contact #contactSection />
   </main>
   <app-footer />

@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <section class="relative overflow-hidden py-14 md:py-20">
+    <section id="home" class="relative overflow-hidden py-14 md:py-20">
       <div class="container relative z-10 mx-auto px-6 text-center sm:px-12 lg:px-20">
         <div
           class="mb-5 inline-flex rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-blue-600 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-400"
@@ -44,7 +44,7 @@ import { RouterLink } from '@angular/router';
             fragment="contact"
             class="flex items-center justify-center rounded-2xl border border-gray-200 bg-white px-6 py-3 font-bold text-gray-900 shadow-sm transition-all hover:border-blue-500/50 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900 dark:text-white"
           >
-            Projekt besprechen
+            Kontakt aufnehmen
           </a>
         </div>
       </div>

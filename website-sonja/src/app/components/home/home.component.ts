@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { AboutComponent } from '../about/about.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 import { HomeHeroComponent } from './home-hero.component';
 import { HomeChallengesComponent } from './home-challenges.component';
 import { HomeContactComponent } from './home-contact.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +15,12 @@ import { HomeContactComponent } from './home-contact.component';
   imports: [
     HeaderComponent,
     FooterComponent,
-    AboutComponent,
     ProjectsComponent,
     ServicesComponent,
     HomeHeroComponent,
     HomeChallengesComponent,
     HomeContactComponent,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
