@@ -50,8 +50,8 @@
   top: calc(100% + 0.75rem);
   right: 0;
   display: flex;
-  width: 100%;
-  min-width: 100%;
+  width: max-content;
+  min-width: 13.5rem;
   flex-direction: column;
   border: 1px solid rgb(226 232 240);
   border-radius: 1rem;
@@ -70,6 +70,7 @@
   color: rgb(71 85 105);
   font-size: 0.8125rem;
   font-weight: 600;
+  white-space: nowrap;
   transition:
     background-color 180ms ease,
     color 180ms ease;

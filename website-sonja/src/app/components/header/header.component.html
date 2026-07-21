@@ -2,12 +2,24 @@
   class="sticky top-0 z-50 w-full border-b border-white/40 bg-white/75 shadow-[0_1px_20px_rgba(15,23,42,0.04)] backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-gray-950/75"
 >
   <div class="container mx-auto flex h-16 items-center justify-between px-6 sm:px-12 lg:px-20">
-    <div class="flex items-center gap-2">
+    <div class="flex items-center">
       <a
         routerLink="/"
-        class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-lg font-extrabold tracking-tight text-transparent"
+        class="flex items-center gap-2.5"
+        aria-label="Sonja Waldenspuhl – Startseite"
       >
-        Sonja Waldenspuhl
+        <img
+          src="favicon.png"
+          alt=""
+          width="44"
+          height="44"
+          class="h-11 w-11 shrink-0 object-contain"
+        />
+        <span
+          class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-lg font-extrabold tracking-tight text-transparent"
+        >
+          Sonja Waldenspuhl
+        </span>
       </a>
     </div>
 
@@ -29,13 +41,14 @@
             <a [routerLink]="['/']" fragment="challenges" class="nav-item">Herausforderungen</a>
             <a [routerLink]="['/']" fragment="services" class="nav-item">Leistungen</a>
             <a [routerLink]="['/']" fragment="projects" class="nav-item">Projekte</a>
+            <a [routerLink]="['/']" fragment="about" class="nav-item">Über mich</a>
             <a [routerLink]="['/']" fragment="contact" class="nav-item">Kontakt</a>
           </div>
         </details>
 
         <details class="nav-dropdown" name="desktop-navigation">
           <summary class="nav-trigger">
-            Über mich
+            Persönliches
             <svg class="nav-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path
                 fill-rule="evenodd"
@@ -45,12 +58,48 @@
             </svg>
           </summary>
           <div class="nav-panel">
-            <a [routerLink]="['/ueber-mich']" class="nav-item">Übersicht</a>
-            <a [routerLink]="['/ueber-mich']" fragment="motivation" class="nav-item">Motivation</a>
-            <a [routerLink]="['/ueber-mich']" fragment="skills" class="nav-item">Fähigkeiten</a>
-            <a [routerLink]="['/ueber-mich']" fragment="credentials" class="nav-item">Nachweise</a>
-            <a [routerLink]="['/ueber-mich']" fragment="team" class="nav-item">Mein Team</a>
-            <a [routerLink]="['/ueber-mich']" fragment="contact" class="nav-item">Kontakt</a>
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="home"
+              (click)="closeMenus('home')"
+              class="nav-item"
+              >Start</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="about"
+              (click)="closeMenus('about')"
+              class="nav-item"
+              >Über mich</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="motivation"
+              (click)="closeMenus('motivation')"
+              class="nav-item"
+              >Motivation</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="skills"
+              (click)="closeMenus('skills')"
+              class="nav-item"
+              >Fähigkeiten &amp; Nachweise</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="team"
+              (click)="closeMenus('team')"
+              class="nav-item"
+              >Mein Team</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="contact"
+              (click)="closeMenus('contact')"
+              class="nav-item"
+              >Kontakt</a
+            >
           </div>
         </details>
       </nav>
@@ -202,6 +251,13 @@
             >
             <a
               [routerLink]="['/']"
+              fragment="about"
+              (click)="isMenuOpen = false"
+              class="mobile-nav-item"
+              >Über mich</a
+            >
+            <a
+              [routerLink]="['/']"
               fragment="contact"
               (click)="isMenuOpen = false"
               class="mobile-nav-item"
@@ -217,7 +273,7 @@
           <summary
             class="flex cursor-pointer list-none items-center justify-between rounded-xl px-2 py-2 font-bold text-slate-900 [&::-webkit-details-marker]:hidden dark:text-white"
           >
-            Über mich
+            Persönliches
             <span
               class="text-slate-400 transition-transform group-open:rotate-45"
               aria-hidden="true"
@@ -225,41 +281,45 @@
             >
           </summary>
           <div class="mobile-nav-items">
-            <a [routerLink]="['/ueber-mich']" (click)="isMenuOpen = false" class="mobile-nav-item"
-              >Übersicht</a
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="home"
+              (click)="closeMenus('home')"
+              class="mobile-nav-item"
+              >Start</a
+            >
+            <a
+              [routerLink]="['/ueber-mich']"
+              fragment="about"
+              (click)="closeMenus('about')"
+              class="mobile-nav-item"
+              >Über mich</a
             >
             <a
               [routerLink]="['/ueber-mich']"
               fragment="motivation"
-              (click)="isMenuOpen = false"
+              (click)="closeMenus('motivation')"
               class="mobile-nav-item"
               >Motivation</a
             >
             <a
               [routerLink]="['/ueber-mich']"
               fragment="skills"
-              (click)="isMenuOpen = false"
+              (click)="closeMenus('skills')"
               class="mobile-nav-item"
-              >Fähigkeiten</a
-            >
-            <a
-              [routerLink]="['/ueber-mich']"
-              fragment="credentials"
-              (click)="isMenuOpen = false"
-              class="mobile-nav-item"
-              >Nachweise</a
+              >Fähigkeiten &amp; Nachweise</a
             >
             <a
               [routerLink]="['/ueber-mich']"
               fragment="team"
-              (click)="isMenuOpen = false"
+              (click)="closeMenus('team')"
               class="mobile-nav-item"
               >Mein Team</a
             >
             <a
               [routerLink]="['/ueber-mich']"
               fragment="contact"
-              (click)="isMenuOpen = false"
+              (click)="closeMenus('contact')"
               class="mobile-nav-item"
               >Kontakt</a
             >
