@@ -40,7 +40,7 @@ interface Challenge {
         </header>
 
         <fieldset
-          class="mx-auto mt-9 divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-900/5 dark:divide-white/5 dark:border-white/10 dark:bg-white/[0.025]"
+          class="mx-auto mt-9 max-w-5xl divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-900/5 dark:divide-white/5 dark:border-white/10 dark:bg-white/[0.025]"
         >
           <legend class="sr-only">Typische Herausforderungen im Vereinsalltag auswählen</legend>
           @for (challenge of challenges; track challenge.id) {
@@ -75,7 +75,7 @@ interface Challenge {
 
         @if (selectedChallenges().length) {
           <div
-            class="mx-auto mt-7 max-w-4xl rounded-3xl border border-blue-200 bg-blue-50 px-6 py-6 text-center dark:border-blue-900 dark:bg-blue-950/30 sm:px-8"
+            class="mx-auto mt-7 max-w-5xl rounded-3xl border border-blue-200 bg-blue-50 px-6 py-6 text-center dark:border-blue-900 dark:bg-blue-950/30 sm:px-8"
             aria-live="polite"
           >
             <p class="text-lg font-black text-gray-900 dark:text-white">
@@ -104,7 +104,7 @@ interface Challenge {
         }
 
         <div
-          class="mx-auto mt-8 max-w-4xl rounded-2xl border border-blue-100 bg-blue-50/70 px-6 py-5 text-center dark:border-blue-950 dark:bg-blue-950/25"
+          class="mx-auto mt-8 max-w-5xl rounded-2xl border border-blue-100 bg-blue-50/70 px-6 py-5 text-center dark:border-blue-950 dark:bg-blue-950/25"
         >
           <p
             class="text-sm font-semibold leading-relaxed text-gray-800 dark:text-gray-200 md:text-base"

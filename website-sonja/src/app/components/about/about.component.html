@@ -11,7 +11,7 @@
       class="absolute -bottom-12 -right-24 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"
     ></div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+    <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-10">
       <!-- Bild-Spalte -->
       <div class="lg:col-span-5 order-2 lg:order-1 relative">
         <div class="relative group">
@@ -96,15 +96,15 @@
 
     <div id="motivation" class="relative mt-12 scroll-mt-24">
       <div
-        class="relative z-10 mx-auto max-w-4xl rounded-3xl border border-blue-100 bg-blue-50/50 p-6 shadow-xl shadow-blue-900/5 backdrop-blur-sm dark:border-blue-900/40 dark:bg-blue-950/20 md:p-9"
+        class="relative z-10 mx-auto max-w-5xl rounded-3xl border border-blue-100 bg-blue-50/50 p-6 shadow-xl shadow-blue-900/5 backdrop-blur-sm dark:border-blue-900/40 dark:bg-blue-950/20 md:p-9"
       >
         <div class="mb-5 flex items-center gap-3">
-          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500/70"
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-500/70"
             >Motivation</span
           >
           <div class="h-px flex-grow bg-blue-100 dark:bg-blue-900/40"></div>
         </div>
-        <h2 class="text-xl font-black leading-tight text-gray-900 dark:text-white md:text-2xl">
+        <h2 class="text-3xl font-black leading-tight text-gray-900 dark:text-white md:text-4xl">
           Warum mir Vereinsarbeit am Herzen liegt
         </h2>
         <div
@@ -137,7 +137,7 @@
       ></div>
     </div>
 
-    <div id="skills" class="mt-12 scroll-mt-24">
+    <div id="skills" class="mx-auto mt-12 max-w-5xl scroll-mt-24">
       <div class="flex items-center gap-3 mb-6">
         <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
           Fähigkeiten
@@ -357,7 +357,7 @@
 
     <div
       id="skills-details"
-      class="skills-details"
+      class="skills-details mx-auto max-w-5xl"
       [class.skills-details--open]="showMoreSkills"
       [attr.aria-hidden]="!showMoreSkills"
       [attr.inert]="showMoreSkills ? null : ''"
@@ -375,12 +375,12 @@
       </div>
     </div>
 
-    <div>
+    <div class="mx-auto max-w-5xl">
       <app-credentials></app-credentials>
     </div>
 
     <!-- Team Sektion -->
-    <div id="team" class="mt-12 scroll-mt-24">
+    <div id="team" class="mx-auto mt-12 max-w-5xl scroll-mt-24">
       <div class="flex items-center gap-3 mb-8">
         <span class="text-[10px] font-bold tracking-[0.2em] text-blue-500/60 uppercase">
           Mein Team
@@ -492,7 +492,7 @@
   aria-labelledby="podiumsdiskussion-title"
   (click)="closePodiumsdiskussion()"
 >
-  <div class="relative max-h-[92vh] max-w-5xl" (click)="$event.stopPropagation()">
+  <div class="relative max-h-[92vh] w-full max-w-5xl" (click)="$event.stopPropagation()">
     <h2 id="podiumsdiskussion-title" class="sr-only">Podiumsdiskussion der ESPKU</h2>
     <button
       type="button"
@@ -506,7 +506,7 @@
       <img
         src="es_pku_podiumsdiskussion_dig_pku.jpg"
         alt="Podiumsdiskussion der ESPKU"
-        class="max-h-[92vh] max-w-full object-contain pointer-events-none"
+        class="mx-auto max-h-[92vh] max-w-full object-contain pointer-events-none"
         draggable="false"
         (contextmenu)="$event.preventDefault()"
       />

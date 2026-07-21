@@ -3,16 +3,24 @@ import { Meta, Title } from '@angular/platform-browser';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HomeContactComponent } from '../home/home-contact.component';
+import { HomeHeroComponent } from '../home/home-hero.component';
 import { AboutComponent } from './about.component';
 
 @Component({
   selector: 'app-about-page',
   standalone: true,
-  imports: [HeaderComponent, AboutComponent, HomeContactComponent, FooterComponent],
+  imports: [
+    HeaderComponent,
+    HomeHeroComponent,
+    AboutComponent,
+    HomeContactComponent,
+    FooterComponent,
+  ],
   template: `
     <div class="min-h-screen bg-white transition-colors duration-300 dark:bg-black">
       <app-header />
       <main>
+        <app-home-hero />
         <app-about />
         <app-home-contact />
       </main>
