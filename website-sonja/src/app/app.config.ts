@@ -13,6 +13,7 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',
       }),
-    ), provideClientHydration(withEventReplay()),
+    ),
+    provideClientHydration(withEventReplay()),
   ],
 };

@@ -1,157 +1,87 @@
 <div>
-  <span class="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
-    Direkter Kontakt
-  </span>
-  <h3 class="mt-2 pr-10 text-lg font-black tracking-tight sm:mt-3 sm:text-xl">Wie möchten Sie Kontakt aufnehmen?</h3>
-  <p class="mt-2 text-xs leading-relaxed text-gray-600 dark:text-gray-400 sm:mt-3 sm:text-sm">
-    Wählen Sie einfach den Weg, der für Sie am besten passt.
-  </p>
-
-  @if (contactFormEnabled) {
-    <div
-      class="mt-4 grid grid-cols-2 gap-1 rounded-xl bg-gray-100 p-1 dark:bg-gray-900 sm:mt-5 sm:rounded-2xl"
-      role="tablist"
-      aria-label="Kontaktart auswählen"
-    >
-      <button
-      type="button"
-      role="tab"
-      [attr.aria-selected]="mode === 'email'"
-      (click)="mode = 'email'"
-      class="rounded-lg px-2 py-2 text-xs font-bold transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 sm:rounded-xl sm:px-3 sm:py-2.5 sm:text-sm"
-      [class.bg-white]="mode === 'email'"
-      [class.text-blue-700]="mode === 'email'"
-      [class.shadow-sm]="mode === 'email'"
-      [class.dark:bg-gray-800]="mode === 'email'"
-      [class.dark:text-blue-400]="mode === 'email'"
-      [class.text-gray-500]="mode !== 'email'"
-    >
-      E-Mail schreiben
-      </button>
-      <button
-        type="button"
-        role="tab"
-        [attr.aria-selected]="mode === 'form'"
-        (click)="mode = 'form'"
-        class="rounded-lg px-2 py-2 text-xs font-bold transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 sm:rounded-xl sm:px-3 sm:py-2.5 sm:text-sm"
-        [class.bg-white]="mode === 'form'"
-        [class.text-blue-700]="mode === 'form'"
-        [class.shadow-sm]="mode === 'form'"
-        [class.dark:bg-gray-800]="mode === 'form'"
-        [class.dark:text-blue-400]="mode === 'form'"
-        [class.text-gray-500]="mode !== 'form'"
-      >
-        Kontaktformular
-      </button>
-    </div>
-  }
-
-  <div class="mt-4 sm:mt-6">
-    <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400 sm:text-sm">
-      Schreiben Sie direkt eine E-Mail. Die Adresse bleibt immer sichtbar – auch wenn Sie das
-      Kontaktformular verwenden.
-    </p>
-    <a
-      href="mailto:business@sonjawaldenspuhl.de?subject=Anfrage%20f%C3%BCr%20meinen%20Verein"
-      class="group mt-3 flex items-center justify-between gap-3 rounded-xl bg-blue-600 px-4 py-3 text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 sm:mt-5 sm:gap-4 sm:rounded-2xl sm:px-5 sm:py-4"
-    >
-      <span>
-        <span class="block text-xs text-blue-100">E-Mail schreiben an</span>
-        <span class="mt-0.5 block text-sm font-black">business&#64;sonjawaldenspuhl.de</span>
-      </span>
-      <span aria-hidden="true" class="text-xl transition-transform group-hover:translate-x-1"
-        >→</span
-      >
-    </a>
-    <p class="mt-4 text-center text-[11px] text-gray-500">
-      Kostenloses und unverbindliches Erstgespräch
-    </p>
-  </div>
-
-  @if (mode === 'form' && contactFormEnabled) {
-    <form
-      action="https://formsubmit.co/business@sonjawaldenspuhl.de"
-      method="POST"
-      class="mt-4 space-y-3 sm:mt-6 sm:space-y-4"
-      role="tabpanel"
-    >
-      <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_next" value="https://sonjawaldenspuhl.de/#contact" />
-      <div class="grid gap-3 sm:grid-cols-2 sm:gap-4">
-        <div>
-          <label for="contact-name" class="mb-1.5 block text-sm font-bold">Name *</label>
-          <input
-            id="contact-name"
-            name="name"
-            type="text"
-            required
-            autocomplete="name"
-            class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
-          />
-        </div>
-
-        <div>
-          <label for="contact-email" class="mb-1.5 block text-sm font-bold">E-Mail-Adresse *</label>
-          <input
-            id="contact-email"
-            name="email"
-            type="email"
-            required
-            autocomplete="email"
-            class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
-          />
-        </div>
-      </div>
-
+  <form
+    action="https://formsubmit.co/business@sonjawaldenspuhl.de"
+    method="POST"
+    class="space-y-3 sm:space-y-4"
+  >
+    <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die Website" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_next" value="https://sonjawaldenspuhl.de/#contact" />
+    <div class="grid gap-3 sm:grid-cols-2 sm:gap-4">
       <div>
-        <label for="contact-phone" class="mb-1.5 block text-sm font-bold">Telefonnummer *</label>
+        <label for="contact-name" class="mb-1.5 block text-sm font-bold">Name *</label>
         <input
-          id="contact-phone"
-          name="telefon"
-          type="tel"
-          required
-          autocomplete="tel"
-          inputmode="tel"
-          class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
-        />
-      </div>
-
-      <div>
-        <label for="contact-organization" class="mb-1.5 block text-sm font-bold">
-          Verein <span class="font-normal text-gray-500">(optional)</span>
-        </label>
-        <input
-          id="contact-organization"
-          name="organization"
+          id="contact-name"
+          name="name"
           type="text"
-          autocomplete="organization"
+          required
+          autocomplete="name"
+          placeholder="Dein Name"
           class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
         />
       </div>
 
       <div>
-        <label for="contact-message" class="mb-1.5 block text-sm font-bold">Ihre Nachricht *</label>
-        <textarea
-          id="contact-message"
-          name="message"
+        <label for="contact-email" class="mb-1.5 block text-sm font-bold">E-Mail-Adresse *</label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
           required
-          minlength="10"
-          rows="4"
-          class="w-full resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
-        ></textarea>
+          autocomplete="email"
+          class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
+        />
       </div>
+    </div>
 
-      <button
-        type="submit"
-        class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-900"
-      >
-        Nachricht direkt senden
-        <span aria-hidden="true">→</span>
-      </button>
-      <p class="text-center text-[11px] leading-relaxed text-gray-500">
-        Ihre Angaben werden zum Versand über den Formulardienst FormSubmit übermittelt.
-      </p>
-    </form>
-  }
+    <div>
+      <label for="contact-phone" class="mb-1.5 block text-sm font-bold">Telefonnummer *</label>
+      <input
+        id="contact-phone"
+        name="telefon"
+        type="tel"
+        required
+        autocomplete="tel"
+        inputmode="tel"
+        placeholder="Deine Telefonnummer"
+        class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
+      />
+    </div>
+
+    <div>
+      <label for="contact-organization" class="mb-1.5 block text-sm font-bold">
+        Verein <span class="font-normal text-gray-500">(optional)</span>
+      </label>
+      <input
+        id="contact-organization"
+        name="organization"
+        type="text"
+        autocomplete="organization"
+        class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
+      />
+    </div>
+
+    <div>
+      <label for="contact-message" class="mb-1.5 block text-sm font-bold">Ihre Nachricht *</label>
+      <textarea
+        id="contact-message"
+        name="message"
+        required
+        minlength="10"
+        rows="4"
+        class="w-full resize-y rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-blue-950"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-900"
+    >
+      Nachricht direkt senden
+      <span aria-hidden="true">→</span>
+    </button>
+    <p class="text-center text-[11px] leading-relaxed text-gray-500">
+      Ihre Angaben werden zum Versand über den Formulardienst FormSubmit übermittelt.
+    </p>
+  </form>
 </div>

@@ -1,6 +1,8 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, HostListener, OnDestroy, inject, viewChild } from '@angular/core';
+import { Component, HostListener, OnDestroy, computed, inject } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { LanguageService } from '../../services/language.service';
+import { createContactMailto } from '../../utils/contact-mailto';
 
 @Component({
   selector: 'app-home-contact',
@@ -67,7 +69,7 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
                 Kontaktformular öffnen <span aria-hidden="true">→</span>
               </button>
               <a
-                href="mailto:business@sonjawaldenspuhl.de"
+                [href]="contactMailto()"
                 class="mt-4 text-center text-sm font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-400"
                 >Oder direkt per E-Mail schreiben</a
               >
@@ -109,7 +111,8 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 })
 export class HomeContactComponent implements OnDestroy {
   private readonly document = inject(DOCUMENT);
-  private readonly contactForm = viewChild(ContactFormComponent);
+  private readonly language = inject(LanguageService);
+  readonly contactMailto = computed(() => createContactMailto(this.language.language()));
   private previouslyFocusedElement: HTMLElement | null = null;
   readonly benefits = ['Unverbindlich', 'Persönlich', 'Verständlich'];
   dialogOpen = false;
@@ -119,7 +122,6 @@ export class HomeContactComponent implements OnDestroy {
     this.dialogOpen = true;
     this.document.body.style.overflow = 'hidden';
     setTimeout(() => {
-      this.contactForm()?.showForm();
       this.document
         .querySelector<HTMLButtonElement>('[aria-label="Kontaktformular schließen"]')
         ?.focus();

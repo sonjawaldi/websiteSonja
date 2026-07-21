@@ -7,9 +7,9 @@ export class ThemeService {
   darkMode = signal<boolean>(
     typeof window !== 'undefined'
       ? localStorage.getItem('theme') === 'dark' ||
-        (!localStorage.getItem('theme') &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches) ||
-        !localStorage.getItem('theme')
+          (!localStorage.getItem('theme') &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+          !localStorage.getItem('theme')
       : true,
   );
 

@@ -7,10 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "prettier": "prettier --write .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "ci": "npm run format:check && npm run lint && npm run test:ci && npm run build",
     "serve:ssr:website-sonja": "node dist/website-sonja/server/server.mjs"
   },
   "private": true,

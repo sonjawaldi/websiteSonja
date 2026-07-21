@@ -18,7 +18,9 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Leistungen
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"
+        ></span>
       </a>
       <a
         [routerLink]="['/']"
@@ -26,7 +28,9 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Projekte
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"
+        ></span>
       </a>
       <a
         [routerLink]="['/']"
@@ -34,7 +38,9 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Über mich
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"
+        ></span>
       </a>
       <a
         [routerLink]="['/']"
@@ -42,7 +48,9 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Nachweise
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"
+        ></span>
       </a>
       <a
         [routerLink]="['/']"
@@ -50,14 +58,39 @@
         class="relative text-xs font-bold text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors group"
       >
         Kontakt
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+        <span
+          class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"
+        ></span>
       </a>
     </nav>
 
     <div class="flex items-center gap-4">
-      <div class="flex items-center rounded-lg bg-gray-100 p-1 text-[11px] font-bold dark:bg-gray-800" aria-label="Sprache auswählen">
-        <button type="button" (click)="languageService.setLanguage('de')" class="rounded-md px-2 py-1 transition-colors" [class.bg-white]="languageService.language() === 'de'" [class.text-blue-600]="languageService.language() === 'de'" [class.shadow-sm]="languageService.language() === 'de'" [class.dark:bg-gray-700]="languageService.language() === 'de'">DE</button>
-        <button type="button" (click)="languageService.setLanguage('en')" class="rounded-md px-2 py-1 transition-colors" [class.bg-white]="languageService.language() === 'en'" [class.text-blue-600]="languageService.language() === 'en'" [class.shadow-sm]="languageService.language() === 'en'" [class.dark:bg-gray-700]="languageService.language() === 'en'">EN</button>
+      <div
+        class="flex items-center rounded-lg bg-gray-100 p-1 text-[11px] font-bold dark:bg-gray-800"
+        aria-label="Sprache auswählen"
+      >
+        <button
+          type="button"
+          (click)="languageService.setLanguage('de')"
+          class="rounded-md px-2 py-1 transition-colors"
+          [class.bg-white]="languageService.language() === 'de'"
+          [class.text-blue-600]="languageService.language() === 'de'"
+          [class.shadow-sm]="languageService.language() === 'de'"
+          [class.dark:bg-gray-700]="languageService.language() === 'de'"
+        >
+          DE
+        </button>
+        <button
+          type="button"
+          (click)="languageService.setLanguage('en')"
+          class="rounded-md px-2 py-1 transition-colors"
+          [class.bg-white]="languageService.language() === 'en'"
+          [class.text-blue-600]="languageService.language() === 'en'"
+          [class.shadow-sm]="languageService.language() === 'en'"
+          [class.dark:bg-gray-700]="languageService.language() === 'en'"
+        >
+          EN
+        </button>
       </div>
       <button
         (click)="themeService.toggleDarkMode()"
@@ -95,10 +128,7 @@
           </svg>
         }
       </button>
-      <button
-        (click)="toggleMenu()"
-        class="md:hidden p-2 text-gray-600 dark:text-gray-300"
-      >
+      <button (click)="toggleMenu()" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -114,11 +144,7 @@
               d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
           } @else {
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           }
         </svg>
       </button>

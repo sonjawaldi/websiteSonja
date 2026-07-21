@@ -8,7 +8,7 @@ import { CredentialsComponent } from '../credentials/credentials.component';
   imports: [CommonModule, AboutSkillsTableComponent, CredentialsComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
-  standalone: true
+  standalone: true,
 })
 export class AboutComponent implements OnInit {
   age: number = 0;
