@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject } from '@angular/core';
+import { Component, ElementRef, Input, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../../services/theme.service';
 import { LanguageService } from '../../services/language.service';
@@ -10,6 +10,12 @@ import { LanguageService } from '../../services/language.service';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  @Input() area: 'verein' | 'business' = 'verein';
+  readonly navigationItems = [
+    { fragment: 'home', label: 'Start' },
+    { fragment: 'services', label: 'Leistungen' },
+    { fragment: 'contact', label: 'Kontakt' },
+  ] as const;
   private readonly elementRef = inject(ElementRef<HTMLElement>);
   themeService = inject(ThemeService);
   languageService = inject(LanguageService);

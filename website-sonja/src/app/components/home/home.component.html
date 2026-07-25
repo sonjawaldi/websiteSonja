@@ -1,6 +1,15 @@
 <div class="min-h-screen bg-white transition-colors duration-300 dark:bg-black">
-  <app-header />
-  <main>
+  <app-header area="verein" />
+  <app-home-offer-dialog
+    (appointmentRequested)="
+      contactSection.showForm({
+        subject: 'Termin für das kostenlose Website-Angebot',
+        message:
+          'Ich interessiere mich für eine der ersten drei kostenlosen Websites und möchte gerne einen Termin vereinbaren.',
+      })
+    "
+  />
+  <main id="main-content" tabindex="-1">
     <app-home-hero />
     <app-home-challenges (contactFormRequested)="contactSection.showForm($event)" />
     <app-services />
@@ -26,7 +35,7 @@
             Sie jetzt gesammelt auf einer eigenen Unterseite.
           </p>
           <a
-            [routerLink]="['/ueber-mich']"
+            [routerLink]="['/business']"
             class="mt-7 inline-flex items-center justify-center rounded-2xl bg-blue-600 px-7 py-3.5 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700"
           >
             Zur Über-mich-Seite <span class="ml-2" aria-hidden="true">→</span>

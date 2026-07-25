@@ -21,6 +21,8 @@ const EN: Record<string, string> = {
   Nachweise: 'Credentials',
   Kontakt: 'Contact',
   'Sprache auswählen': 'Select language',
+  'Deutsch auswählen': 'Select German',
+  'Englisch auswählen': 'Select English',
   Hauptnavigation: 'Main navigation',
   'Mobile Hauptnavigation': 'Mobile main navigation',
   'Farbschema wechseln': 'Toggle color scheme',
@@ -163,7 +165,7 @@ const EN: Record<string, string> = {
   'Nachweis ansehen →': 'View credential →',
   'Ansicht schließen': 'Close view',
   'Bereit für Ihre Idee': 'Ready for your idea',
-  'Machen wir Ihren Verein digital stärker.': 'Let’s strengthen your association digitally.',
+  'Lassen Sie uns Ihre Idee gemeinsam weiterentwickeln.': 'Let’s develop your idea together.',
   'Sie haben eine Idee, ein konkretes Problem oder wissen noch nicht genau, wo Sie anfangen sollen? Schreiben Sie mir – wir finden gemeinsam den passenden nächsten Schritt.':
     'Do you have an idea, a specific problem, or are you unsure where to start? Send me a message – together we will find the right next step.',
   'Vorteile der Kontaktaufnahme': 'Benefits of getting in touch',
@@ -200,6 +202,26 @@ const EN: Record<string, string> = {
   'Digitale Lösungen speziell für Vereine': 'Digital solutions for associations',
   Impressum: 'Legal notice',
   'Alle Rechte vorbehalten.': 'All rights reserved.',
+  Barrierefreiheit: 'Accessibility',
+  'Zum Hauptinhalt springen': 'Skip to main content',
+  'Diese Website informiert über digitale Beratungs- und Entwicklungsleistungen für Vereine. Interessierte können die Leistungen und Projekte kennenlernen und über E-Mail oder ein Kontaktformular eine unverbindliche Anfrage senden.':
+    'This website provides information about digital consulting and development services for associations. Visitors can learn about services and projects and send a no-obligation enquiry by email or contact form.',
+  'Barrierefreie Nutzung': 'Accessible use',
+  'Die Website ist für die Bedienung mit Tastatur und assistiven Technologien ausgelegt. Sie bietet eine logische Überschriftenstruktur, sichtbare Fokusmarkierungen, beschriftete Formulare, Alternativtexte, vergrößerbare Inhalte, anpassbare Farbdarstellung und eine reduzierte Darstellung von Bewegungen entsprechend den Geräteeinstellungen.':
+    'The website is designed for keyboard operation and assistive technologies. It provides a logical heading structure, visible focus indicators, labelled forms, alternative text, resizable content, adaptable colours and reduced motion according to device settings.',
+  'Stand der Vereinbarkeit': 'Compliance status',
+  'Ziel ist die Vereinbarkeit mit den Anforderungen des Barrierefreiheitsstärkungsgesetzes und der Verordnung zum Barrierefreiheitsstärkungsgesetz auf Grundlage der europäischen Norm EN 301 549 und WCAG 2.2 auf Konformitätsstufe AA. Die Website wird bei Änderungen erneut geprüft.':
+    'The goal is compliance with the German Accessibility Strengthening Act and its implementing ordinance, based on the European standard EN 301 549 and WCAG 2.2 at conformance level AA. The website is reviewed again when changes are made.',
+  'Stand: 22. Juli 2026': 'Last updated: 22 July 2026',
+  'Barriere melden': 'Report an accessibility barrier',
+  'Falls Sie auf eine Barriere stoßen oder Informationen in einer anderen zugänglichen Form benötigen, schreiben Sie bitte an':
+    'If you encounter an accessibility barrier or need information in another accessible format, please email',
+  '. Bitte nennen Sie möglichst die betroffene Seite und beschreiben Sie das Problem.':
+    '. Please identify the affected page and describe the problem where possible.',
+  Marktüberwachungsbehörde: 'Market surveillance authority',
+  'Zuständig ist die Marktüberwachungsstelle der Länder für die Barrierefreiheit von Produkten und Dienstleistungen (MLBF AöR). Informationen und das Kontaktformular für Verbraucherinnen und Verbraucher finden Sie auf der':
+    'The competent authority is the Market Surveillance Authority of the German Federal States for the Accessibility of Products and Services (MLBF). Information and the consumer contact form are available on the',
+  'Website der MLBF': 'MLBF website',
   'Angaben gemäß § 5 TMG': 'Information pursuant to Section 5 TMG',
   'Seite nicht gefunden': 'Page not found',
   'Die von Ihnen gesuchte Seite existiert leider nicht oder wurde verschoben.':

@@ -7,6 +7,7 @@ import { ServicesComponent } from '../services/services.component';
 import { HomeHeroComponent } from './home-hero.component';
 import { HomeChallengesComponent } from './home-challenges.component';
 import { HomeContactComponent } from './home-contact.component';
+import { HomeOfferDialogComponent } from './home-offer-dialog.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -20,6 +21,7 @@ import { RouterLink } from '@angular/router';
     HomeHeroComponent,
     HomeChallengesComponent,
     HomeContactComponent,
+    HomeOfferDialogComponent,
     RouterLink,
   ],
   templateUrl: './home.component.html',
@@ -52,6 +54,9 @@ export class HomeComponent implements OnInit {
       content: 'Barrierearme, datenschutzbewusste digitale Lösungen speziell für Vereine.',
     });
     this.metaService.updateTag({ property: 'og:type', content: 'website' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://sonjawaldenspuhl.de/' });
+    this.metaService.updateTag({
+      property: 'og:url',
+      content: 'https://sonjawaldenspuhl.de/verein',
+    });
   }
 }

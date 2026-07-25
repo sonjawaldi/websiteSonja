@@ -3,11 +3,11 @@ import { RouterLink } from '@angular/router';
 import { AnalyticsConsentService } from '../../services/analytics-consent.service';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-cookie-consent',
+  standalone: true,
   imports: [RouterLink],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css',
+  templateUrl: './cookie-consent.component.html',
 })
-export class FooterComponent {
+export class CookieConsentComponent {
   readonly consent = inject(AnalyticsConsentService);
 }

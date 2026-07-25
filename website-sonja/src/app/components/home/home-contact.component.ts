@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, OnDestroy, computed, inject } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { LanguageService } from '../../services/language.service';
+import { CONTACT_FORM_ENABLED } from '../../config/feature-flags';
 import { createContactMailto } from '../../utils/contact-mailto';
 import type { ContactPrefill } from './home-challenges.component';
 
@@ -28,7 +29,7 @@ import type { ContactPrefill } from './home-challenges.component';
               <h2
                 class="mt-5 max-w-xl text-3xl font-black leading-tight tracking-tight md:text-4xl"
               >
-                Machen wir Ihren Verein digital stärker.
+                Lassen Sie uns Ihre Idee gemeinsam weiterentwickeln.
               </h2>
               <p class="mt-4 max-w-xl text-sm leading-relaxed text-blue-100 md:text-base">
                 Sie haben eine Idee, ein konkretes Problem oder wissen noch nicht genau, wo Sie
@@ -60,19 +61,26 @@ import type { ContactPrefill } from './home-challenges.component';
                 Erzählen Sie mir von Ihrem Projekt.
               </h3>
               <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                Öffnen Sie das Kontaktformular und senden Sie mir Ihre Anfrage in wenigen Schritten.
+                @if (contactFormEnabled) {
+                  Öffnen Sie das Kontaktformular und senden Sie mir Ihre Anfrage in wenigen
+                  Schritten.
+                } @else {
+                  Schreiben Sie mir Ihre Anfrage direkt per E-Mail.
+                }
               </p>
-              <button
-                type="button"
-                class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
-                (click)="showForm()"
-              >
-                Kontakt aufnehmen <span aria-hidden="true">→</span>
-              </button>
+              @if (contactFormEnabled) {
+                <button
+                  type="button"
+                  class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
+                  (click)="showForm()"
+                >
+                  Kontakt aufnehmen <span aria-hidden="true">→</span>
+                </button>
+              }
               <a
                 [href]="contactMailto()"
-                class="mt-4 text-center text-sm font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-400"
-                >Oder direkt per E-Mail schreiben</a
+                class="mt-6 text-center text-sm font-semibold text-blue-700 underline decoration-blue-300 underline-offset-4 dark:text-blue-400"
+                >Direkt per E-Mail schreiben</a
               >
             </div>
           </div>
@@ -80,7 +88,7 @@ import type { ContactPrefill } from './home-challenges.component';
       </div>
     </section>
 
-    @if (dialogOpen) {
+    @if (contactFormEnabled && dialogOpen) {
       <div
         class="fixed inset-0 z-[100] flex items-center justify-center bg-gray-950/70 p-2 backdrop-blur-sm sm:p-4 lg:p-6"
         role="presentation"
@@ -113,6 +121,7 @@ import type { ContactPrefill } from './home-challenges.component';
 export class HomeContactComponent implements OnDestroy {
   private readonly document = inject(DOCUMENT);
   private readonly language = inject(LanguageService);
+  readonly contactFormEnabled = CONTACT_FORM_ENABLED;
   readonly contactMailto = computed(() => createContactMailto(this.language.language()));
   private previouslyFocusedElement: HTMLElement | null = null;
   readonly benefits = ['Unverbindlich', 'Persönlich', 'Verständlich'];
@@ -120,6 +129,8 @@ export class HomeContactComponent implements OnDestroy {
   formPrefill: ContactPrefill = { subject: 'Neue Kontaktanfrage über die Website', message: '' };
 
   showForm(prefill?: ContactPrefill): void {
+    if (!this.contactFormEnabled) return;
+
     this.formPrefill = prefill ?? {
       subject: 'Neue Kontaktanfrage über die Website',
       message: '',

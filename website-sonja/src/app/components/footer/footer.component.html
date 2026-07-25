@@ -20,6 +20,25 @@
       >
         Impressum
       </a>
+      <a
+        routerLink="/barrierefreiheit"
+        class="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors"
+      >
+        Barrierefreiheit
+      </a>
+      <a
+        routerLink="/datenschutz"
+        class="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors"
+      >
+        Datenschutz
+      </a>
+      <button
+        type="button"
+        class="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors"
+        (click)="consent.openSettings()"
+      >
+        Cookie-Einstellungen
+      </button>
     </div>
     <div class="flex justify-center gap-6 mb-8">
       <a
