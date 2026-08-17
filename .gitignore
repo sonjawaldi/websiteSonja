@@ -1,0 +1,3 @@
+/node_modules/
+# Ausgaben von `ng serve`, die beim Umleiten in eine Datei entstehen
+*.log
