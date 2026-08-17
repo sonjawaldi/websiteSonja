@@ -197,8 +197,11 @@ const EN: Record<string, string> = {
   '(optional)': '(optional)',
   'Ihre Nachricht *': 'Your message *',
   'Nachricht direkt senden': 'Send message',
-  'Ihre Angaben werden zum Versand über den Formulardienst FormSubmit übermittelt.':
-    'Your details are transmitted via the FormSubmit service to send your message.',
+  'Ihre Angaben werden ausschließlich zum Versand dieser Nachricht verwendet.':
+    'Your details are used solely to send this message.',
+  'Wird gesendet …': 'Sending …',
+  'Vielen Dank für Ihre Nachricht. Ich melde mich zeitnah bei Ihnen.':
+    'Thank you for your message. I will get back to you shortly.',
   'Digitale Lösungen speziell für Vereine': 'Digital solutions for associations',
   Impressum: 'Legal notice',
   'Alle Rechte vorbehalten.': 'All rights reserved.',
